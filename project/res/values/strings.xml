@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">prom.by</string>
+    <string name="search_title">Поиск</string>
+    <string name="no_orders">Отсутствуют заказы для показа</string>
+    
+    
+    <string name="order_id_title">Номер заказа:</string>
+    <string name="order_orderer_title">Заказчик:</string>
+    <string name="order_date_title">Дата заказа:</string>
+    <string name="order_phone_title">Телефон:</string>
+    <string name="order_email_title">Email:</string>
+    <string name="order_address_title">Адрес доставки:</string>
+    <string name="order_company_title">Компания:</string>
+    
+    <string name="error">Ошибка</string>
+    <string name="ok">OK</string>
+    <string name="cant_reach_server">Сервер недоступен или отсутствует связь с интернетом.</string>
+    
+    <string name="items">Товары:</string>
+
+</resources>
