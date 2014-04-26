@@ -41,7 +41,7 @@ public class ItemView extends LinearLayout{
 		photo.setImageUrl(item.getImage(), mImageLoader);
 
 		itemName.setText(item.getName());
-		itemPrice.setText(item.getPrice() + " | " + item.getQuantity());
+		itemPrice.setText(item.getPrice() + " | " + item.getQuantity() + " шт.");
 		itemCost.setText(String.valueOf(item.getPrice() * Double.parseDouble(item.getQuantity()))); //FIXME: wow, such quantity, so string 
 	}
 
