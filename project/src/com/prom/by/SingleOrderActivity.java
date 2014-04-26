@@ -33,6 +33,7 @@ public class SingleOrderActivity extends FragmentActivity {
 
 	OrderPagerAdapter pagerAdapter;
 
+	//RequestQueue and cache - for downloading images from the net.
 	public RequestQueue rQueue;
 	public BitmapLruCache cache;
 

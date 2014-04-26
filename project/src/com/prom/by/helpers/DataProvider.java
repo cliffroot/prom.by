@@ -15,8 +15,6 @@ import org.apache.http.util.EntityUtils;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
-import android.util.Log;
-
 import com.prom.by.model.Orders;
 
 @EBean
@@ -34,7 +32,6 @@ public class DataProvider extends DefaultHttpClient{
 			Serializer serializer = new Persister();       
 			Reader reader = new StringReader(xmlData);
 			Orders orders = serializer.read(Orders.class, reader, false);
-			Log.d("Orders", orders.toString());
 			return orders;
 		} catch (Exception ex) {
 			ex.printStackTrace();

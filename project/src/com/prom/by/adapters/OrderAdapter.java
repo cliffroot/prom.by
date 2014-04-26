@@ -18,7 +18,7 @@ import com.prom.by.model.Order;
 import com.prom.by.views.OrderView;
 import com.prom.by.views.OrderView_;
 
-@EBean(scope = Scope.Singleton)
+@EBean(scope = Scope.Singleton) // it should be like this because in this case it may store orders even when the OrderListAtivity is not shown
 public class OrderAdapter extends BaseAdapter implements Filterable{
 
 	List<Order> items;
@@ -95,6 +95,7 @@ public class OrderAdapter extends BaseAdapter implements Filterable{
 				Locale locale = new Locale("ru");
 				String cons = constraint.toString().toLowerCase(locale);
 				for (Order order: allItems) {
+					//condition for orders, satisfying which allows them to pass into final result;
 					if (order.getId().toString().startsWith(cons) || order.getName().toLowerCase(locale).contains(cons) || order.getPhone().contains(cons) || 
 							order.itemSKUStartsWith(cons) || order.itemNameContains(cons)) {
 						filtered.add(order);

@@ -14,7 +14,6 @@ import org.androidannotations.annotations.ViewById;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ListView;
@@ -48,7 +47,7 @@ public class OrderListActivity extends Activity implements SearchView.OnQueryTex
 
 	@AfterInject
 	void getOrders () {
-		if (orderAdapter.getItems() == null) {
+		if (orderAdapter.getItems() == null) { // there might be already elements in there.
 			fetchFromServer();
 		}
 	}
@@ -100,6 +99,7 @@ public class OrderListActivity extends Activity implements SearchView.OnQueryTex
 		orders.addAll(orderAdapter.getItems());
 		bundle.putParcelableArrayList("orders", orders);
 		Intent i = new Intent(OrderListActivity.this, SingleOrderActivity_.class);
+		//pass all the orders in the adapter, and the one that was clicked;
 		i.putExtra("orders", bundle);
 		i.putExtra("order_position", position);
 		orderAdapter.setItems(orderAdapter.getAllItems());
@@ -116,7 +116,6 @@ public class OrderListActivity extends Activity implements SearchView.OnQueryTex
 
 	@Override
 	public boolean onQueryTextChange(String arg0) {
-		Log.i("Query", "Text change");
 		orderAdapter.getFilter().filter(arg0);
 		return true;
 	}
