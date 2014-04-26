@@ -16,16 +16,16 @@ import android.os.Parcelable;
 @Element(name = "order")
 public class Order implements Parcelable{
 
-	@Attribute (name = "id")
+	@Attribute (name = "id", required = false)
 	Long id;
 
-	@Attribute (name = "state")
+	@Attribute (name = "state", required = false)
 	String state;
 
-	@Element(name = "name")
+	@Element(name = "name", required = false)
 	String name;
 
-	@Element(name = "phone")
+	@Element(name = "phone", required = false)
 	String phone;
 
 	@Element(name = "company", required = false)
@@ -34,10 +34,10 @@ public class Order implements Parcelable{
 	@Element(name = "email", required = false)
 	String email;
 
-	@Element(name = "date")
+	@Element(name = "date", required = false)
 	String date;
 
-	@Element(name = "address")
+	@Element(name = "address", required = false)
 	String address;
 
 	@Element(name = "index", required = false) 
@@ -49,19 +49,19 @@ public class Order implements Parcelable{
 	@Element(name = "salescomment", required = false)
 	String salesComment;
 
-	@Element(name = "paymentType")
+	@Element(name = "paymentType", required = false)
 	String paymentType;
 
-	@Element(name = "deliveryType")
+	@Element(name = "deliveryType", required = false)
 	String deliveryType;
 
 	@Element(name = "deliveryCost", required = false)
 	Double deliveryCost;
 
-	@Element(name = "priceBYR")
+	@Element(name = "priceBYR", required = false)
 	Double price;
 
-	@ElementList(name = "items")
+	@ElementList(name = "items", required = false)
 	List<Item> items;
 
 	public String getName() {

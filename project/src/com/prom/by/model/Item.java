@@ -12,25 +12,25 @@ public class Item implements Parcelable{
 	@Attribute
 	Long id;
 
-	@Element (name = "name")
+	@Element (name = "name", required = false)
 	String name;
 
-	@Element (name = "quantity")
+	@Element (name = "quantity", required = false)
 	String quantity;
 
-	@Element (name = "currency")
+	@Element (name = "currency", required = false)
 	String currency;
 
-	@Element (name = "image")
+	@Element (name = "image", required = false)
 	String image;
 
-	@Element (name = "url")
+	@Element (name = "url", required = false)
 	String url;
 
-	@Element (name = "price")
+	@Element (name = "price", required = false)
 	Double price;
 
-	@Element (name = "sku") 
+	@Element (name = "sku", required = false) 
 	String sku;
 
 	public Long getId() {
