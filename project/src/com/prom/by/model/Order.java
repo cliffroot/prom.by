@@ -195,7 +195,7 @@ public class Order implements Parcelable{
 	public Double getItemsTotalPrice () {
 		Double price = 0.0;
 		for (Item item: items) {
-			price += item.getPrice();
+			price += item.getPrice()==null?0.d:item.getPrice();
 		}
 		return price;
 	}

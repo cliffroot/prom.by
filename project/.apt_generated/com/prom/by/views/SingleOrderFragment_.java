@@ -65,14 +65,14 @@ public final class SingleOrderFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        orderItems = ((LinearLayoutList) hasViews.findViewById(com.prom.by.R.id.order_items));
-        orderEmail = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_email));
         orderAddress = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_address));
-        orderId = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_id));
-        orderPrice = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_phone));
+        orderEmail = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_email));
+        orderOrderer = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_orderer));
+        orderItems = ((LinearLayoutList) hasViews.findViewById(com.prom.by.R.id.order_items));
         orderCompany = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_company));
         orderDate = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_date));
-        orderOrderer = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_orderer));
+        orderId = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_id));
+        orderPrice = ((TextView) hasViews.findViewById(com.prom.by.R.id.order_phone));
         populateFragment();
     }
 

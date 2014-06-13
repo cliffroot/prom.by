@@ -42,7 +42,7 @@ public class ItemView extends LinearLayout{
 
 		itemName.setText(item.getName());
 		itemPrice.setText(item.getPrice() + " | " + item.getQuantity() + " шт.");
-		itemCost.setText(String.valueOf(item.getPrice() * Double.parseDouble(item.getQuantity()))); //FIXME: wow, such quantity, so string 
+		itemCost.setText(String.valueOf((item.getPrice()==null?0.d:item.getPrice()) * Double.parseDouble(item.getQuantity()))); //FIXME: wow, such quantity, so string 
 	}
 
 

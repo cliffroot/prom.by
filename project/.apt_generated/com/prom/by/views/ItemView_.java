@@ -67,10 +67,10 @@ public final class ItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        itemPrice = ((TextView) hasViews.findViewById(id.item_price));
         itemCost = ((TextView) hasViews.findViewById(id.item_cost));
         photo = ((NetworkImageView) hasViews.findViewById(id.item_photo));
         itemName = ((TextView) hasViews.findViewById(id.item_name));
+        itemPrice = ((TextView) hasViews.findViewById(id.item_price));
     }
 
 }

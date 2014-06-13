@@ -83,8 +83,8 @@ public final class OrderListActivity_
     @Override
     public void onViewChanged(HasViews hasViews) {
         ordersList = ((ListView) hasViews.findViewById(com.prom.by.R.id.orders));
-        progressBar = ((ProgressBar) hasViews.findViewById(com.prom.by.R.id.progress));
         empty = ((TextView) hasViews.findViewById(android.R.id.empty));
+        progressBar = ((ProgressBar) hasViews.findViewById(com.prom.by.R.id.progress));
         {
             AdapterView<?> view = ((AdapterView<?> ) hasViews.findViewById(com.prom.by.R.id.orders));
             if (view!= null) {

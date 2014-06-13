@@ -45,7 +45,7 @@ public class LinearLayoutList extends LinearLayout {
 				this.addView(divider, dlp);
 			}
 
-			total += adapter.getItem(i).getPrice() * Double.parseDouble(adapter.getItem(i).getQuantity());
+			total += (adapter.getItem(i).getPrice()==null?0.d:adapter.getItem(i).getPrice()) * Double.parseDouble(adapter.getItem(i).getQuantity());
 		}
 
 		View v = ((Activity)context).getLayoutInflater().inflate(R.layout.view_item_list_total_cost, null);

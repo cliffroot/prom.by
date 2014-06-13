@@ -66,11 +66,11 @@ public final class OrderView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        orderId = ((TextView) hasViews.findViewById(id.order_id));
         orderItems = ((TextView) hasViews.findViewById(id.order_items));
+        orderPrice = ((TextView) hasViews.findViewById(id.order_price));
+        orderId = ((TextView) hasViews.findViewById(id.order_id));
         orderTime = ((TextView) hasViews.findViewById(id.order_time));
         orderName = ((TextView) hasViews.findViewById(id.order_name));
-        orderPrice = ((TextView) hasViews.findViewById(id.order_price));
     }
 
 }
