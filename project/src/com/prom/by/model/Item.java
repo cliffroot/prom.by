@@ -90,7 +90,7 @@ public class Item implements Parcelable{
 	}
 
 	public String getSku() {
-		return sku;
+		return sku==null?"":sku;
 	}
 
 	public void setSku(String sku) {

@@ -65,7 +65,7 @@ public class Order implements Parcelable{
 	List<Item> items;
 
 	public String getName() {
-		return name;
+		return name==null?"":name;
 	}
 
 	public void setName(String name) {
